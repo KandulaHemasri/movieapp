@@ -77,7 +77,7 @@ function App() {
   if (!mood) return;
 
   try {
-    setLoading(true);// start loading
+    setLoading(true);        // start loading
     setIsMoodSearch(true);
     setNoResults(false);
 
