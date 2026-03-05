@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #1c1c1c;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: rgb(187, 57, 18);
+}
+
+.app-container {
+  padding: 30px 40px;
+}
+
+/* SEARCH BAR */
+.search-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #1f1f1f;
+  border-radius: 40px;
+  padding: 5px;
+  width: 420px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px 18px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.search-box input::placeholder {
+  color: #888;
+}
+
+.search-box button {
+  background-color: #4caf50;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 40px;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+/* MOVIE GRID */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* MOVIE CARD */
+.movie-card {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-6px);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* MOVIE INFO */
+.movie-info {
+  padding: 12px;
+}
+
+.movie-info h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.movie-info p {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.movie-info span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #f5c518;
+}
+
+/* HEART BUTTON */
+.heart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.heart {
+  font-size: 18px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.heart.active {
+  color: red;
+}
+
+
+/* RESPONSIVE */
+ @media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav a {
+    margin: 10px 0;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-container input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .search-container button {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .mood-container input {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .mood-container button {
+    width: 90%;
+    margin-left: 0;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .movie-card img {
+    height: 220px;
+  }
+}
