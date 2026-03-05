@@ -81,7 +81,7 @@ function App() {
     setIsMoodSearch(true);
     setNoResults(false);
 
-    const response = await fetch("http://localhost:5000/mood-match", {
+    const response = await fetch("https://movieapp-joay.onrender.com/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
